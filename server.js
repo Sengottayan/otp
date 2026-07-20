@@ -14,15 +14,12 @@
  * against that sessionId server-side. We never store the OTP ourselves.
  */
 
-const path = require('path');
-require('dotenv').config({ path: path.resolve(__dirname, '.env.local') });
 require('dotenv').config();
 
 const express = require('express');
 const app = express();
 
 app.use(express.json());
-
 
 const TWOFACTOR_API_KEY = process.env.TWOFACTOR_API_KEY;
 const VAPI_WEBHOOK_SECRET = process.env.VAPI_WEBHOOK_SECRET; // optional
